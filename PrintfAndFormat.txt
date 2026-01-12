@@ -1,0 +1,55 @@
+/* 
+Joe Bob Kim
+PrintfAndFormat.java
+9.4.18
+*/
+public class PrintfAndFormat
+{ 
+ public static void main ( String [] args )
+ { 
+  PrintfAndFormat klay = new PrintfAndFormat();
+  //klay.printFormat();
+  //klay.printPrintf();
+  System.out.println("Phew! \n");
+System.out.printf("This %10.1f \t %s", 2.345, "quiz");
+System.out.println("is" + Format.right("done", 15));
+System.out.println("0123456789012345678901234567890123456789012345 <--not part of output");
+ }
+ 
+ public void printFormat()
+ {
+  String name = "Sally";
+  double grade = 85.3456;
+  System.out.println("\n\n");
+  System.out.println("\n0123456789012345678901234567890123456789012345678901234567890123456789");
+  System.out.print("Ms. " + Format.left(name, 26) + " is here.");
+  System.out.println("\n0123456789012345678901234567890123456789012345678901234567890123456789");
+  System.out.print("Ms. " + Format.center(name, 2) + " is here.");
+  System.out.println("\n0123456789012345678901234567890123456789012345678901234567890123456789");
+  System.out.print("Grade is " + Format.right(grade, 15, 2) + " percent.");
+  System.out.print("\n\n\n");
+ }
+ 
+ public void printPrintf()
+ {
+  int age = 15;
+  String name = "Sally";
+  System.out.println("\n\n\n");
+  System.out.printf("%s \t %s", "apple", "sauce");
+  System.out.println("");
+  System.out.printf("%d x %d is %d \n", 5, 3, 5*3);
+  System.out.println("");
+  System.out.printf("You are %d years older than %s", age, name);
+  System.out.println("");
+  System.out.printf("Dec is %10.2f ", 1234567.89012);
+  System.out.println("");
+  System.out.printf("Alpha is %3s", "abcde");
+  System.out.println("");
+  System.out.printf("%10.3f", 0.00123); 
+  System.out.println("");
+  System.out.printf("%-10.3f\n", 0.00123); 
+  System.out.printf("%-6.2f %%", 89.1234); 
+  System.out.println("\n\n\n");
+ }
+ 
+}

@@ -1,0 +1,54 @@
+import java.awt.*;  import java.awt.event.*;
+import javax.swing.*; import javax.swing.event.*; 
+
+public class BorderLayoutExample2 extends JFrame
+{
+  public static void main(String[] args) 
+  {
+    BorderLayoutExample2 BLE = new BorderLayoutExample2();
+  }  
+   public BorderLayoutExample2()
+ {
+  super("BorderLayout Example2");
+  setSize( 800, 500);    
+  setDefaultCloseOperation(DISPOSE_ON_CLOSE);   
+  setLocation(400,50);
+  setResizable(true);
+  Practice pc = new Practice();   
+  setContentPane( pc );  // OR frame.getContentPane().add(p_in);
+  setVisible(true);  
+ }
+}
+
+class Practice extends JPanel
+{ 
+ public Practice() 
+ {
+  setBackground( Color.YELLOW );
+  runIt();
+  }
+ public void paintComponent(Graphics g) 
+ {
+  super.paintComponent (g);
+  g.drawString("JoeBob",50,400);
+ }
+ public void runIt()
+ {
+	JButton ba1 = new JButton("<html>" + "North" + "<br>" +num+ "</html>");
+	ba1.setPreferredSize(new Dimension(600,100));
+    JButton ba2=new JButton("South");
+    JButton ba3=new JButton("East");
+    JButton ba4=new JButton("West");
+    //JButton ba5=new JButton("Center");
+    JLabel jl1 = new JLabel("Joe Label");
+    jl1.setHorizontalAlignment(JLabel.CENTER);
+    JPanel pa = new JPanel();
+    add(pa);
+    pa.setLayout(new BorderLayout());
+    pa.add(ba1, BorderLayout.NORTH);
+    pa.add(ba2, BorderLayout.SOUTH);
+    pa.add(ba3, BorderLayout.EAST);
+    pa.add(ba4, BorderLayout.WEST);
+    pa.add(jl1, BorderLayout.CENTER); 
+  }
+}
